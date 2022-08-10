@@ -1,0 +1,489 @@
+{% extends 'customer_template/base_customer.html' %}
+
+{% block page_title %}  {% endblock page_title %} 
+{% block page_content %}
+
+<header class="header bg-white10">
+  <div class="container">
+    <a href="#" class="logo bold white"
+      >Smart<span class="lightpurple">Connect</span></a
+    >
+    <div class="menu">
+      <form action="" class="search-form">
+        <label for="search-box" class="fas fa-search"></label>
+        <input
+          type="search"
+          id="search-box"
+          placeholder="Search items and collections"
+        />
+      </form>
+      <a href="#collections">Colleccion</a>
+      <a href="#cliente">Clientes</a>
+      <a href="{% url 'customer_logout_process' %}">Salir</a>
+      
+    </div>
+  </div>
+</header>
+ <!-- collections section starts -->
+ <section class="collections spacer10" id="collections">
+ 	<div class="container">
+ 		<h1 class="bold size4 ta-center">Categorias</h1>
+ 		<p class="spacebottom3 halfwhite size2 ta-center">
+                Escoge la marca de tu preferecia, y<br>Genera un Servicio.
+            </p>
+            <div class="row spacebottom3 filter-buttons">
+                <div class="col3 filter col6-xs spacebottom1-xs" data-filter="all">All</div>
+                <div class="col3 filter col6-xs spacebottom1-xs" data-filter="art">Status</div>
+                <div class="col3 filter col6-xs" data-filter="photograpy">Otros</div>
+                <div class="col3 filter col6-xs" data-filter="pattern">Ranking</div>
+            </div>
+            <div class="row box-card jc-evenly-md">
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="art">
+                    <img src="img/collection1.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @TELECOMUNICACIONES
+
+                            </p>
+                            <h5 class="size2 bold">Internet y Telefonia</h5>
+                        </div>
+                        
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection2.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @TELECOMUNICACIONES
+
+                            </p>
+                            <h5 class="size2 bold">Internet TV y Telefonia</h5>
+                        </div>
+                        
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="pattern">
+                    <img src="img/collection3.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @TELECOMUNICACIONES
+                            </p>
+                            <h5 class="size2 bold">WOM</h5>
+                        </div>
+                        
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="art">
+                    <img src="img/collection4.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @TELECOMUNICACIONES
+                            </p>
+                            <h5 class="size2 bold">Entel</h5>
+                        </div>
+                       
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection5.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @TELECOMUNICACIONES
+                            </p>
+                            <h5 class="size2 bold">Entel Movil</h5>
+                        </div>
+                        
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="pattern">
+                    <img src="img/collection6.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @SEGUROS
+
+                            </p>
+                            <h5 class="size2 bold">HDI SEGUROS</h5>
+                        </div>
+                        
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                       Go
+                    </a>
+                </div>
+
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="art">
+                    <img src="img/collection7.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @SEGUROS
+                            </p>
+                            <h5 class="size2 bold">SURA SEGUROS
+</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">AUTMOTRIZ</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @SALUD
+
+                            </p>
+                            <h5 class="size2 bold">NUEVA MAS VIDA</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">A NEXUS COMPANY</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                 <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @ENERGIAS
+
+                            </p>
+                            <h5 class="size2 bold">METROGAS</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">Gas Home</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="pattern">
+                    <img src="img/collection9.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @SALUD
+
+                            </p>
+                            <h5 class="size2 bold">UNIDAD CORONARIA MOVIL</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">UCM</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @MUDANZAS
+
+
+                            </p>
+                            <h5 class="size2 bold">MUDANGO</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">Al instante</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                 <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @SEGURO
+
+
+                            </p>
+                            <h5 class="size2 bold">VERISURE</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">En Vanguardia</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @FUNERARIO
+
+
+                            </p>
+                            <h5 class="size2 bold">ESPACIO JARDIN COSTANERA</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">Funerario</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @COMBUSTIBLE
+
+
+                            </p>
+                            <h5 class="size2 bold">SHELL</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">CARD</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @ALARMAS
+
+
+
+                            </p>
+                            <h5 class="size2 bold">FIRST SECURITY</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">Vive Tranquilo</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @ALARMAS
+
+
+
+                            </p>
+                            <h5 class="size2 bold">Pro Seguro</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">seguro</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @CREMACION
+
+
+
+                            </p>
+                            <h5 class="size2 bold">Sendero</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite"></p>
+                            
+                        </div>
+                    </div>
+                        <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                        </a>
+                    </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @SEGURO
+
+
+
+                            </p>
+                            <h5 class="size2 bold">SURA HOGAR</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite"></p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @SEGURO
+
+
+
+                            </p>
+                            <h5 class="size2 bold">ASPOR HOGAR</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite"></p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @SEGURO
+
+
+
+                            </p>
+                            <h5 class="size2 bold">HDI SEGUROS</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite"></p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @SEGURO
+
+
+
+                            </p>
+                            <h5 class="size2 bold">FDI</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">Para PYMES</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @TELECOMUNICACIONES
+
+
+
+                            </p>
+                            <h5 class="size2 bold">CLARO</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">Movil</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+                
+                <div class="col4 card collect bg-white10 col5-md col6-s" data-item="photograpy">
+                    <img src="img/collection8.png" class="img-responsive" alt="">
+                    <div class="row jc-between spacetop2">
+                        <div>
+                            <p class="size2 halfwhite">
+                                @INMOBILIARIA
+
+
+
+
+                            </p>
+                            <h5 class="size2 bold">ALTOS DOMINICOS</h5>
+                        </div>
+                        <div>
+                            <p class="current halfwhite">Vive Tranquilo</p>
+                            
+                        </div>
+                    </div>
+                    <a href="{% url 'add_order' %}"  class="bid size2 ta-center">
+                        Go
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- collections section ends -->
+
+{% endblock page_content %}

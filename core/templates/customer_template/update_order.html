@@ -1,0 +1,31 @@
+{% extends 'admin_templates/base_template.html' %}
+{% block title %}
+Lista de Ordenes
+{% endblock title %}
+
+
+{% block custom_css %}
+{% endblock custom_css %}
+
+{% block page_title %}
+Ordenes de Servicio Lista
+{% endblock page_title %}
+
+
+
+
+
+{% block page_content %}
+
+
+    <main role="main" class="container">
+        <div class="jumbotron">
+            <h1>{{title}}</h1><br>
+            <form method="POST" action=''>{% csrf_token %}
+                {{form|crispy}}
+                <input href="{% url 'order_list' %}" type="submit" value="Save"/>
+            </form>
+        </div>
+    </main>
+
+{% endblock page_title %}  
