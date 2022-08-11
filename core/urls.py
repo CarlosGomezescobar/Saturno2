@@ -29,6 +29,6 @@ urlpatterns = [
     #path('orden/<str:pk>', views.orden, name='orden'),
     #path('delete_order/<str:pk>', views.delete_order, name='delete_order'),
 
-    #excel
+    # excel
     path('export_excel_order', views.export_excel_order, name="export-excel_order"),
 ]

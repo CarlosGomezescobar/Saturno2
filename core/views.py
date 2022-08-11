@@ -58,7 +58,7 @@ def adminLoginProcess(request):
     user = authenticate(request=request, username=username, password=password)
     if user.is_active:
 
-        if user is not None and AdminUser:
+        if user is not None and StaffUser:
             login(request=request, user=user)
             return HttpResponseRedirect(reverse("admin_home"))
 
@@ -176,6 +176,8 @@ class CustomerOrdenCreateView(SuccessMessageMixin, CreateView):
         return HttpResponseRedirect(reverse("customer_home"))
 
 #
+
+
 class CustomerOrdeCreateView(SuccessMessageMixin, CreateView):
     template_name = "customer_template/add_orde.html"
     model = CustomerOrders
@@ -198,17 +200,16 @@ def OrderListView(request):
     form = CustomerOrdersForm(request.POST or None)
     paginate_by = 8
     queryset = CustomerOrders.objects.all()
-    
+
     context = {
         "header": header,
         "form": form,
         "queryset": queryset,
         "paginate_by": paginate_by,
-        
+
 
     }
-    
-    
+
     return render(request, "customer_template/order_list.html", context)
 
 
@@ -228,6 +229,7 @@ def update_order(request, pk):
     }
     return render(request, "customer_template/add_orde.html", context)
 
+
 def export_excel_order(request):
     response = HttpResponse(content_type='application/ms-excel')
     response['Content-Disposition'] = 'attachment; filename=CustomerOrders' + \
@@ -239,14 +241,16 @@ def export_excel_order(request):
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
 
-    columns = ['ID', 'Nombre del Producto', 'Ejecutivo', 'RUT del Cliente', 'Nombre de Cliente', 'Apellido del Cliente', 'Email', 'Telefono', 'Pais', 'Ciudad', 'Direccion', 'Descripcion', 'Creado', 'Status']
+    columns = ['ID', 'Nombre del Producto', 'Ejecutivo', 'RUT del Cliente', 'Nombre de Cliente',
+               'Apellido del Cliente', 'Email', 'Telefono', 'Pais', 'Ciudad', 'Direccion', 'Descripcion', 'Creado', 'Status']
     for col_num in range(len(columns)):
         ws.write(row_num, col_num, columns[col_num], font_style)
     font_style = xlwt.XFStyle()
 
-    rows = CustomerOrders.objects.all().values_list('id','product_id', 'ejecutivo', 'rut_cliente', 'nombre_cliente', 'apellido_cliente', 'email', 'telefono', 'pais', 'ciudad', 'direccion', 'descripcion', 'created_at', 'status')
-    #filter(
-     #   owner=request.user).values_list('id','product_id', 'ejecutivo', 'rut_cliente', 'nombre_cliente', 'apellido_cliente', 'email', 'telefono', 'pais', 'ciudad', 'direccion', 'descripcion', 'created_at', 'status')
+    rows = CustomerOrders.objects.all().values_list('id', 'product_id', 'ejecutivo', 'rut_cliente', 'nombre_cliente',
+                                                    'apellido_cliente', 'email', 'telefono', 'pais', 'ciudad', 'direccion', 'descripcion', 'created_at', 'status')
+    # filter(
+    #   owner=request.user).values_list('id','product_id', 'ejecutivo', 'rut_cliente', 'nombre_cliente', 'apellido_cliente', 'email', 'telefono', 'pais', 'ciudad', 'direccion', 'descripcion', 'created_at', 'status')
 
     for row in rows:
         row_num += 1

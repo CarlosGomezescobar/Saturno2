@@ -28,7 +28,7 @@ from django.views.decorators.csrf import csrf_exempt
 #import xlwt
 
 
-@login_required(login_url="/admin")
+@login_required(login_url="/staff")
 def admin_home(request):
     return render(request, "admin_templates/home.html")
 
