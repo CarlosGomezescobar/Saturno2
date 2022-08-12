@@ -49,7 +49,6 @@ dataclassy==0.11.1
 dbus-python==1.2.16
 defusedxml==0.7.1
 distro==1.4.0
-distro-info===0.23ubuntu1
 dj-database-url==1.0.0
 Django==4.0.3
 django-allauth==0.51.0
