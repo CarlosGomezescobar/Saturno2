@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     'crispy_forms',
+    'django_summernote',
+    "whitenoise.runserver_nostatic",
+
 ]
 
 MIDDLEWARE = [
@@ -144,7 +147,8 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR,  "static")
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 BASE_URL = "http://127.0.0.1:8000"
 django_heroku.settings(locals())
 
@@ -170,4 +174,5 @@ SITE_ID = 1
 
 # CRISPY FORMS
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+WHITENOISE_MANIFEST_STRICT = False
