@@ -7,7 +7,6 @@ import datetime
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-from pytest import Instance
 from django.views.generic import ListView, CreateView, UpdateView, DetailView, View
 from django.contrib.messages.views import SuccessMessageMixin
 from django.core.files.storage import FileSystemStorage
