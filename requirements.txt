@@ -33,7 +33,6 @@ cffi==1.15.1
 cfn-lint==0.54.3
 chardet==3.0.4
 charset-normalizer==2.0.11
-cliapp==1.20180812.1
 click==8.0.3
 click-didyoumean==0.3.0
 click-plugins==1.1.1
