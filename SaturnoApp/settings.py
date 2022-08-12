@@ -94,12 +94,12 @@ WSGI_APPLICATION = "SaturnoApp.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": env("POSTGRES_ENGINE"),
-        "NAME": env("POSTGRES_DB"),
-        "USER": env("POSTGRES_USER"),
-        "PASSWORD": env("POSTGRES_PASSWORD"),
-        "HOST": env("PG_HOST"),
-        "PORT": env("PG_PORT"),
+        "ENGINE": 'django.db.backends.postgresql_psycopg2',
+        "NAME": 'dd1qeh3t0fe9li',
+        "USER": 'prrjnqfxhrzycv',
+        "PASSWORD": '9d58cfa4486c6b3ebcbd3449890793294533cde5f7036f619f66bf16abfe5b9c',
+        "HOST": 'ec2-34-227-135-211.compute-1.amazonaws.com',
+        "PORT": '5234',
 
     }
 }
