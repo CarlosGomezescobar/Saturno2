@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-uc95*va_t7bui3yl!xvt2c=!f)3rz9$+(0(^7bdqnjmbq-=@5@
 
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = ['saturnoappcf.herokuapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 # Application definition
 
