@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import environ
 import os
+import django_heroku
 from pathlib import Path
 env = environ.Env(
     DEBUG=(bool, False))
@@ -145,6 +146,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR,  "static")
 BASE_URL = "http://127.0.0.1:8000"
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
