@@ -14,7 +14,7 @@ import environ
 import os
 import django_heroku
 from pathlib import Path
-env = environ.Env(
+env = os.environ.Env(
     DEBUG=(bool, False))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
