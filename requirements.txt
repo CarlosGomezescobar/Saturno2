@@ -227,7 +227,6 @@ toml==0.10.2
 tomli==2.0.0
 toolz==0.11.2
 tqdm==4.62.3
-ttystatus==0.38
 typing-extensions==4.0.1
 ubuntu-advantage-tools==27.9
 ubuntu-drivers-common==0.0.0
