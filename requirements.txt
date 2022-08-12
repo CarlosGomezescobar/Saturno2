@@ -10,7 +10,6 @@ black==22.1.0
 isort==5.9.3
 PyJWT==2.1.0
 django-celery-beat==2.1.0
-django-cors-headers==3.8.0
 django-countries==7.2.1
 django-crispy-forms==1.13.0
 django-heroku==0.3.1 
